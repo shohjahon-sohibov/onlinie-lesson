@@ -7,7 +7,7 @@ const { getAllLessons, getLessonById } = require("../controllers/Lessons/lessons
 router.get('/all-lessons', getAllLessons)
 
 // get one lesson by id
-router.post('/new', getLessonById)
+router.post('/:id', getLessonById)
 
 
 module.exports = router

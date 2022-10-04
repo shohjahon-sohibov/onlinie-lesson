@@ -10,8 +10,7 @@ const getAllLessons = async(_, res) => {
 
 const getLessonById = async(req, res) => {
         try {
-            const { id } = req.body
-        res.json(await model.getLessonById(id))
+        res.json(await model.getLessonById(req.params.id))
         } catch(err) {
             console.log(err);
         }
